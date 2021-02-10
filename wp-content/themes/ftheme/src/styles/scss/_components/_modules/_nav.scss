@@ -1,0 +1,317 @@
+.m-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    z-index: 15;
+
+    &.-single {
+
+        .menu a {
+
+            &::after,
+            &::before {
+                background-color: $blue-dark;
+            }
+
+        }
+    }
+
+    &__listCta {
+        display: flex;
+
+        @include media-down(l) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+            min-width: 290px;
+            padding: 70px 20px;
+            min-height: 100vh;
+            background-color: $white;
+            border-radius: 30px 0 0 30px;
+            box-shadow: -10px 0 20px rgba($black, .4);
+            transform: translateX(120%);
+            transition: transform .4s;
+            z-index: 15;
+
+            &.-active {
+                transform: translateX(30px);
+            }
+        }
+
+        @include media-up(l) {
+            margin-left: auto;
+
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+
+        @include media-up(l) {
+            flex-direction: row;
+        }
+
+
+        a {
+            position: relative;
+            display: block;
+            font-weight: 500;
+            color: $blue-dark;
+            font-size: 20px;
+
+            @include media-up(l) {
+                font-size: inherit;
+                color: $white;
+
+                &::after,
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: -8px;
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background-color: $blue-light;
+                    transition: width .4s ease-in-out;
+                }
+
+                &::before {
+                    left: 0;
+                }
+
+                &::after {
+                    right: 0;
+                }
+            }
+        }
+
+
+
+        .m-nav__dropToggle {
+            >a {
+
+                &::after,
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .menu-item {
+        margin-top: 12px;
+
+        @include media-up(l) {
+            margin-top: 0;
+            margin-right: 30px;
+
+        }
+
+        @include media-up(xl) {
+
+            margin-right: 40px;
+        }
+
+        &:hover {
+            >a {
+
+                &::after,
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+    &__dropToggle {
+        position: relative;
+        padding-right: 22px;
+        background-image: url('./bundles/images/arrow-blue.svg');
+        background-position: top 18px center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        transition: background-position .4s;
+        cursor: pointer;
+
+        @include media-up(l) {
+            background-image: url('./bundles/images/arrow.svg');
+            background-position: top 13px right;
+
+        }
+
+        &.-active,
+        &:hover {
+            @include media-up(l) {
+
+                background-position: top 18px right;
+            }
+        }
+
+        &.-active {
+            @include media-down(l) {
+                background-position: top 22px center;
+            }
+        }
+
+        .sub-menu {
+            padding-left: 15px;
+
+            @include media-down(l) {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height .2s ease-out;
+
+
+            }
+
+            @include media-up(l) {
+                z-index: 2;
+                position: absolute;
+                top: 35px;
+                left: 0;
+                width: max-content;
+                padding: 16px 27px;
+                background: $white;
+                box-shadow: 0 4px 24px rgba($black, .16);
+                border-radius: 4px;
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(-20px);
+                transition: opacity .4s, transform .4s;
+            }
+
+            &.-active {
+                opacity: 1;
+                transform: translateY(0);
+                pointer-events: initial;
+            }
+
+            li {
+                margin: 0;
+                padding: 12px 0;
+                line-height: 24px;
+            }
+
+            a {
+                font-size: 12px;
+
+                @include media-up(l) {
+                    color: $gray-heading;
+
+                }
+            }
+        }
+    }
+
+    &__ctas {
+
+        &.-products {
+            width: 257px;
+        }
+
+        @include media-up(l) {
+            width: 247px;
+        }
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__demo {
+
+        @include media-up(l) {
+            margin-right: 16px;
+        }
+    }
+
+    &__what {
+        display: flex;
+        align-items: center;
+
+        @include media-up(l) {
+            color: $white;
+            transition: color .4s;
+
+            &:hover {
+                color: $blue-light;
+            }
+        }
+    }
+
+    &__hamburger {
+        width: 30px;
+        height: 24px;
+        position: relative;
+        margin-left: auto;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        z-index: 16;
+
+        @include media-up(l) {
+            display: none;
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            background: $white;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+
+            &:nth-child(1) {
+                top: 0;
+                transform-origin: left center;
+            }
+
+            &:nth-child(2) {
+                top: 10px;
+                transform-origin: left center;
+            }
+
+            &:nth-child(3) {
+                top: 20px;
+                transform-origin: left center;
+            }
+        }
+
+
+        &.-active span {
+            background-color: $blue-dark;
+
+            &:nth-child(1) {
+                transform: rotate(45deg);
+                left: 4px;
+            }
+
+            &:nth-child(2) {
+                width: 0%;
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+                top: 21px;
+                left: 4px;
+            }
+
+        }
+    }
+}

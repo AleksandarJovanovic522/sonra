@@ -1,0 +1,305 @@
+.m-contact {
+    @include section-padding;
+
+
+
+    &__formContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include media-up(l) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__formText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include media-up(l) {
+            display: block;
+            margin-right: 20px;
+        }
+
+
+        h5 {
+            margin-top: 20px;
+        }
+    }
+
+    &__form {
+
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+
+
+        @include media-up(l) {
+            margin-top: 0;
+        }
+
+        form {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include media-up(m) {
+                align-items: initial;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+            }
+
+            input,
+            textarea,
+            select {
+                width: 300px;
+                padding: 0 8px;
+                margin-bottom: 9px;
+                border: 1px solid #ddd;
+                font-size: 13px;
+                color: #555;
+                background-color: $white;
+                border-radius: 4px;
+                box-shadow: inset 0 1px 1px rgba($black, .075);
+                transition: box-shadow .3s, border-color .3s;
+
+                @include media-up(m) {
+                    width: 600px;
+                }
+
+                ::placeholder {
+                    font-size: 13px;
+                }
+
+                &:focus {
+                    outline: 0;
+                    border-color: rgba($black, .3);
+                    box-shadow: inset 0 1px 1px rgba($black, .075), 0 0 8px rgba($black, .2);
+                }
+            }
+
+            input,
+            select {
+                height: 35px;
+            }
+
+            input {
+                &.-half {
+                    @include media-up(m) {
+
+                        width: 100%;
+                        max-width: 280px;
+                    }
+                }
+
+            }
+
+            .wpcf7-submit {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 16px 20px;
+                max-width: 248px;
+                height: 56px;
+                background: $blue-light;
+                border-radius: 4px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: $white;
+                transition: background-color .4s;
+
+
+                &:hover {
+                    background-color: $blue-dark;
+                }
+            }
+
+
+        }
+    }
+
+    &__informationsDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+
+        @include media-up(s) {
+            margin-top: 40px;
+            flex-direction: row;
+            align-items: initial;
+            justify-content: space-around;
+        }
+    }
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        max-width: 160px;
+
+        @include media-up(s) {
+            margin-top: 0;
+        }
+    }
+
+    &__informationImg {
+        width: 100%;
+        height: 50px;
+        margin: 0 auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: auto;
+
+        @include media-up (s) {
+            background-position: center left;
+
+        }
+
+        &.-address {
+            background-image: url('./bundles/images/hq.svg');
+
+        }
+
+        &.-phone {
+            background-image: url('./bundles/images/phone.svg');
+
+        }
+
+        &.-email {
+            background-image: url('./bundles/images/email.svg');
+
+        }
+    }
+
+    &__informationType {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: $gray-heading;
+        text-align: center;
+
+        @include media-up (s) {
+            text-align: left;
+        }
+    }
+
+    &__informationValue {
+        font-size: 14px;
+        line-height: 24px;
+
+        &.-phone {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            color: $blue-dark;
+
+            @include media-up(s) {
+                color: $gray-paragraph;
+                pointer-events: none;
+                cursor: auto;
+            }
+
+        }
+
+        &.-mail {
+            color: $blue-dark;
+        }
+    }
+
+    &__imgsMap {
+        display: flex;
+        margin-top: 40px;
+        flex-direction: column;
+
+        @include media-up(l) {
+            flex-direction: row;
+        }
+    }
+
+    &__imgs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        @include media-up(s) {
+            flex-wrap: nowrap;
+        }
+
+
+        @include media-up(l) {
+            padding: 0;
+            align-items: inherit;
+            max-width: 400px;
+            flex-direction: column;
+            margin: 0 30px 0 0;
+        }
+
+        img {
+            padding-bottom: 30px;
+            width: 100%;
+
+            @include media-up(s) {
+                margin: 10px;
+                width: 47%;
+
+            }
+
+
+            @include media-up(l) {
+                width: 100%;
+                padding-bottom: 0;
+                margin: 0;
+
+                &:not(:first-child) {
+
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    &__map {
+        width: 100%;
+        margin-top: 10px;
+        padding: 0 10px;
+
+        @include media-up(s) {
+            padding: 0;
+        }
+
+        @include media-up(l) {
+            margin-top: 0;
+        }
+
+        .leaflet-map {
+            height: 400px;
+            border: 1px solid $gray-paragraph;
+        }
+    }
+
+    &__mapLink {
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 20px;
+        transition: color .3s;
+
+        &:hover {
+            color: $blue-light;
+        }
+    }
+}

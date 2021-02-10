@@ -1,0 +1,19 @@
+.m-what {
+    @include section-padding;
+    width: 100%;
+    background-color: $blue-light;
+
+    &__heading {
+        color: $white;
+
+    }
+
+    &__text {
+        margin-top: 64px;
+    }
+
+    &__cta {
+        margin: 43px auto 0;
+    }
+
+}

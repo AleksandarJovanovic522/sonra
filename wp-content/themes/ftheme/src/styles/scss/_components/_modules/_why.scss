@@ -1,0 +1,23 @@
+.m-why {
+    @include section-padding;
+    background-color: $gray-10;
+
+    &__content {
+        max-width: 590px;
+        margin: 63px auto 0;
+
+        ul li {
+            margin-top: 16px;
+            padding: 0 6px 0 30px;
+            background-image: url('./bundles/images/arrow-green.svg');
+            background-position: top 13px left;
+            background-size: auto;
+            background-repeat: no-repeat;
+        }
+
+        .figure {
+            margin-top: 16px;
+            padding-left: 31px;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.m-who {
+    padding-bottom: 100px;
+
+
+    &.-try {
+        padding-bottom: 104px;
+    }
+
+    &__subheading {
+        margin-top: 16px;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    &__topText {
+        margin-top: 80px;
+    }
+
+    &__text {
+        margin-top: 64px;
+    }
+
+    &__bottomText {
+        margin-top: 64px;
+    }
+}

@@ -1,0 +1,38 @@
+.a-ctaPrimary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 20px;
+    max-width: 248px;
+    height: 56px;
+    background: $blue-light;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: $white;
+    transition: background-color .4s;
+
+    &.-demo {
+
+        max-width: 264px;
+    }
+
+    &.-request {
+        max-width: 288px;
+    }
+
+    &.-invert {
+        transition: background-color .4s, color .4s;
+        background-color: $blue-dark;
+
+        &:hover {
+            background-color: $white;
+            color: $blue-dark;
+        }
+    }
+
+    &:hover {
+        background-color: $blue-dark;
+    }
+}

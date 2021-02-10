@@ -1,0 +1,148 @@
+.m-steps {
+    @include section-padding;
+
+    background-color: $gray-10;
+
+    &.-try {
+        padding-bottom: 0;
+        background-color: initial;
+
+        @include media-up(m) {
+
+            padding-top: 102px;
+
+        }
+
+        .m-steps__stepContainer {
+            margin-top: 71px;
+        }
+    }
+
+    &__topText {
+        margin-top: 16px;
+
+        h5 {
+            line-height: 1.6;
+        }
+
+        p {
+            margin-top: 19px;
+        }
+    }
+
+    &__subheading {
+        margin-top: 22px;
+        text-align: center;
+    }
+
+    &__stepContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 78px;
+
+        @include media-up(m) {
+            flex-direction: row;
+
+            align-items: initial;
+        }
+    }
+
+    &__step {
+        position: relative;
+        width: 100%;
+        max-width: 384px;
+        text-align: center;
+
+        &:not(:last-child) {
+
+            margin-bottom: 60px;
+        }
+
+        @include media-up(m) {
+            width: 384/1216*100%;
+            text-align: left;
+
+            &:not(:last-child) {
+
+                margin-bottom: 0;
+            }
+        }
+
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -20px;
+            width: 24px;
+            height: 24px;
+
+
+            @include media-up(m) {
+                top: 12px;
+            }
+
+        }
+
+
+        &:not(:last-child),
+        &:last-child {
+
+            &::after {
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: auto;
+
+                @include media-down(m) {
+                    left: 50%;
+                }
+
+            }
+        }
+
+        &:not(:last-child)::after {
+            background-image: url('./bundles/images/arrow-dotted.svg');
+            transform: translateX(-50%) rotate(90deg);
+
+            @include media-up(m) {
+                transform: none;
+                right: 16px;
+            }
+
+        }
+
+        &:last-child::after {
+            background-image: url('./bundles/images/checkmark-gray.svg');
+            transform: translateX(-50%);
+
+            @include media-up(m) {
+                transform: none;
+                right: 11px;
+            }
+        }
+
+    }
+
+    &__stepText {
+
+        h4 {
+            margin-top: 28px;
+        }
+
+        p {
+            margin-top: 12px;
+        }
+
+    }
+
+    &__text {
+        margin-top: 48px;
+
+        h5 {
+            line-height: 32px;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.m-tryQuote {
+    @include section-padding;
+    width: 100%;
+
+    @include media-up(m) {
+        padding-top: 104px;
+    }
+}

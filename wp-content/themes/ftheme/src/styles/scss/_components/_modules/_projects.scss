@@ -1,0 +1,77 @@
+.m-projects {
+    width: 100%;
+    padding-top: 88px;
+
+
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__container {
+        margin-top: 80px;
+    }
+
+    &__block {
+        margin-top: 64px;
+        padding: 40px 32px 32px;
+        background: $white;
+        border: 1px solid #f0f0f0;
+        border-radius: 4px;
+    }
+
+    &__infoDiv {
+        margin-top: 32px;
+        font-size: 18px;
+    }
+
+    &__name {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 20px;
+        color: $gray-heading;
+    }
+
+    &__description {
+        p {
+            &:first-of-type {
+                margin-top: 6px;
+            }
+        }
+
+        a {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 1px;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: $blue-dark;
+            }
+        }
+    }
+
+    &__quote {
+        margin-top: 32px;
+        padding-left: 40px;
+        color: $gray-heading;
+        background-image: url('./bundles/images/quote-gray.svg');
+        background-position: top left;
+        background-size: 25px auto;
+        background-repeat: no-repeat;
+
+        @include media-up(m) {
+            padding-left: 66px;
+            background-size: auto;
+
+        }
+    }
+
+    &__imageDiv {
+        margin-top: 24px;
+    }
+}

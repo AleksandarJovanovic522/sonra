@@ -1,0 +1,54 @@
+.m-table {
+
+    &__table {
+        margin-top: 24px;
+        width: 100%;
+
+
+
+
+        th,
+        td {
+
+            &:not(:first-child) {
+                width: 112px;
+                text-align: center;
+            }
+        }
+
+        tr {
+            border-bottom: 1px solid #efefef;
+        }
+
+        th {
+            color: $gray-heading;
+            line-height: 24px;
+        }
+
+        td {
+            padding: 8px 4px 7px;
+            font-size: 14px;
+            line-height: 24px;
+
+            @include media-up(s) {
+                padding: 8px 16px 7px;
+
+            }
+
+            &.-included {
+                background-image: url('./bundles/images/checkmark-green.svg');
+                background-position: center center;
+                background-size: auto;
+                background-repeat: no-repeat;
+            }
+        }
+
+
+
+    }
+
+    &__typeRow {
+        background-color: $blue-dark;
+        color: $white;
+    }
+}

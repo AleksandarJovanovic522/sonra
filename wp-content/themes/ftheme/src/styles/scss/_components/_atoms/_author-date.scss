@@ -1,0 +1,73 @@
+.a-authorDate {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7px;
+
+    @include media-up(s) {
+        flex-direction: row;
+    }
+
+    &.-single {
+        margin-top: 30px;
+
+        @include media-up(m) {
+
+            margin-top: 0;
+        }
+
+        .a-authorDate {
+
+            &__author {
+                color: $white;
+
+                &:hover {
+                    color: $blue-light;
+                    background-color: $white;
+                }
+            }
+
+            &__date {
+
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+
+
+    &__author {
+        display: flex;
+        align-items: center;
+        width: max-content;
+        margin-right: 33px;
+        color: $blue-dark;
+        border-radius: 16px;
+        transition: background-color .3s, padding .3s, color .3s;
+
+        &:hover {
+            background-color: $gray-10;
+
+            padding: 0 8px;
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            border-radius: 50%;
+        }
+    }
+
+    &__date {
+        margin-top: 10px;
+        padding-left: 23px;
+        background-image: url('./bundles/images/date.svg');
+        background-position: center left;
+        background-size: auto;
+        background-repeat: no-repeat;
+
+
+        @include media-up(s) {
+            margin-top: 0;
+        }
+    }
+}

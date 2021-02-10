@@ -1,0 +1,53 @@
+.a-ctaNav {
+    display: flex;
+    align-items: center;
+    max-width: max-content;
+    min-width: max-content;
+    padding: 0 16px;
+    height: 40px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color .4s, background-color .4s;
+
+    &.-demo {
+        background-color: $blue-dark;
+        color: $white;
+
+        @include media-up(l) {
+            background-color: $white;
+            color: $gray-heading;
+        }
+
+        &:hover {
+            @include media-up(l) {
+                background-color: $blue-light;
+                color: $white;
+
+            }
+        }
+    }
+
+    &.-try {
+        border: 1px solid $blue-dark;
+        color: $blue-dark;
+
+        @include media-up(l) {
+            border-color: $white;
+            color: $white;
+        }
+
+        &:hover {
+            @include media-up(l) {
+                background-color: $white;
+                color: $gray-heading;
+            }
+        }
+    }
+
+    &.-single {
+        &:hover {
+            background-color: $blue-dark;
+        }
+    }
+}

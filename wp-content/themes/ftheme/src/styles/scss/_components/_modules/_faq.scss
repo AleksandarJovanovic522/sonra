@@ -1,0 +1,18 @@
+.m-faq {
+    @include section-padding;
+
+
+
+    &__text {
+        margin-top: 60px;
+
+        @include media-up(l) {
+            margin-top: 80px;
+        }
+    }
+
+    &__button {
+        margin: 32px auto 0;
+
+    }
+}

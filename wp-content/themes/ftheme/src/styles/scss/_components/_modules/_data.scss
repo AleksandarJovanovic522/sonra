@@ -1,0 +1,27 @@
+.m-data {
+    width: 100%;
+    background-color: $gray-10;
+    @include section-padding;
+
+
+
+    &__text {
+        margin-top: 15px;
+    }
+
+    &__bottomText {
+        margin-top: 43px;
+
+        h5 {
+            padding-right: 1px;
+        }
+    }
+
+    &__button {
+        margin: 28px auto 0;
+
+        &.-biggerMarginTop {
+            margin-top: 40px;
+        }
+    }
+}

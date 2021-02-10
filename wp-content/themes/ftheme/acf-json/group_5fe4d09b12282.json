@@ -1,0 +1,330 @@
+{
+    "key": "group_5fe4d09b12282",
+    "title": "[ CONTENT ] - Homepage",
+    "fields": [
+        {
+            "key": "field_5fe4d0a8ea86a",
+            "label": "Advice and tools",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5feae1655791b",
+            "label": "Heading",
+            "name": "aat_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fe4d105ea86d",
+            "label": "Advice and tools repeater",
+            "name": "aat_repeater",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5fe4d142ea86e",
+                    "label": "Image",
+                    "name": "aat_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5fe4d168ea870",
+                    "label": "Text",
+                    "name": "aat_text",
+                    "type": "wysiwyg",
+                    "instructions": "<strong>NOTE:<\/strong><\/br>\r\n- For first-level subheading use  H3<\/br>\r\n- For second-level subheading use  H4<\/br>\r\n- For third-level subheading use  H5<\/br>\r\n- For line between text click on toolbar toggle and then click <strong>Horizontal line<\/strong><\/br>\r\n- For list use UL (Bulleted list)<\/br>",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_600977c21c49f",
+                    "label": "Link to Page",
+                    "name": "aat_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url"
+                }
+            ]
+        },
+        {
+            "key": "field_5fe4d1d6ea871",
+            "label": "Who are we?",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5fe4d1e7ea872",
+            "label": "Heading",
+            "name": "who_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fe4d1faea873",
+            "label": "Text top",
+            "name": "who_text_top",
+            "type": "wysiwyg",
+            "instructions": "<strong>NOTE:<\/strong><\/br>\r\n- For first-level subheading use  H3<\/br>\r\n- For second-level subheading use  H4<\/br>\r\n- For third-level subheading use  H5<\/br>\r\n- For line between text click on toolbar toggle and then click <strong>Horizontal line<\/strong><\/br>\r\n- For list use UL (Bulleted list)<\/br>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5fe4d237ea875",
+            "label": "Clients",
+            "name": "who_clients",
+            "type": "gallery",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5fe4d2f6ea877",
+            "label": "Quote",
+            "name": "who_quote",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fe4d36233237",
+            "label": "Quote Author",
+            "name": "who_quote_author",
+            "type": "text",
+            "instructions": "The Client that wrote the quote.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fe4d38b33238",
+            "label": "Text bottom",
+            "name": "who_text_bottom",
+            "type": "wysiwyg",
+            "instructions": "<strong>NOTE:<\/strong><\/br>\r\n- For first-level subheading use  H3<\/br>\r\n- For second-level subheading use  H4<\/br>\r\n- For third-level subheading use  H5<\/br>\r\n- For line between text click on toolbar toggle and then click <strong>Horizontal line<\/strong><\/br>\r\n- For list use UL (Bulleted list)<\/br>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5fe4d61c94d0a",
+            "label": "What can you expect",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5fe4d63794d0b",
+            "label": "Heading",
+            "name": "expect_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fe4d64f94d0c",
+            "label": "Text",
+            "name": "expect_text",
+            "type": "wysiwyg",
+            "instructions": "<strong>NOTE:<\/strong><\/br>\r\n- For first-level subheading use  H3<\/br>\r\n- For second-level subheading use  H4<\/br>\r\n- For third-level subheading use  H5<\/br>\r\n- For line between text click on toolbar toggle and then click <strong>Horizontal line<\/strong><\/br>\r\n- For list use UL (Bulleted list)<\/br>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "5"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1612181362
+}

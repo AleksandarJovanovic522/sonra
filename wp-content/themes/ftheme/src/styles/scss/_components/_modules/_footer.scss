@@ -1,0 +1,71 @@
+.m-footer {
+    padding: 64px 0 48px;
+    background: #262626;
+    text-align: center;
+
+
+    @include media-up(l) {
+        text-align: initial;
+
+    }
+
+    &__info {
+        color: $white;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 24px;
+
+        div {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            text-align: center;
+
+
+
+            @include media-up(xl) {
+                width: 30%;
+                padding: 0;
+                text-align: left;
+            }
+
+        }
+
+        @include media-up(xl) {
+            justify-content: space-between;
+
+
+        }
+
+    }
+
+    &__links {
+
+        justify-content: end;
+    }
+
+    &__companyName {
+        justify-content: center;
+    }
+
+    &__address,
+    &__link {
+        font-size: 14px;
+    }
+
+    &__link {
+        white-space: nowrap;
+        color: $white;
+        transition: color .4s;
+
+
+        &.-privacy {
+            margin: 0 6px;
+        }
+
+        &:hover {
+            color: $blue-light;
+        }
+    }
+}

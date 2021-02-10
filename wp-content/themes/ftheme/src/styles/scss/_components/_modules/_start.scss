@@ -1,0 +1,40 @@
+.m-start {
+    @include section-padding;
+    width: 100%;
+    background-color: $blue-light;
+
+    &__heading {
+        color: $white;
+    }
+
+    &__listDiv {
+        margin-top: 50px;
+        padding-bottom: 48px;
+        background-image: url('./bundles/images/background-shapes.svg');
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &__list {
+        max-width: 592px;
+        margin: 0 auto;
+        padding: 32px;
+        background-color: #00929e;
+
+        ul {
+            margin: 0;
+        }
+    }
+
+    &__cta {
+        margin: 0 auto;
+    }
+
+    &__card {
+        display: block;
+        margin-top: 23px;
+        text-align: center;
+        color: $white;
+    }
+}

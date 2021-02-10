@@ -1,0 +1,11 @@
+.m-wrapper {
+    max-width: 1276px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+
+    @include media-up(s) {
+
+        padding: 0 30px;
+    }
+}

@@ -1,0 +1,55 @@
+.m-equals {
+    @include section-padding;
+
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        background-color: #f4f9f7;
+
+        @include media-up(m) {
+            justify-content: space-between;
+            align-items: initial;
+            flex-wrap: nowrap;
+            padding-right: 104/1216 * 100%;
+        }
+
+
+        &:not(:first-child) {
+            margin-top: 80px;
+        }
+    }
+
+    &__imgDiv {
+
+        @include media-up(m) {
+            margin-right: 30px;
+        }
+    }
+
+    &__textDiv {
+        width: 100%;
+        padding: 40px 19px;
+
+        @include media-up(m) {
+            width: 696/1112 * 100%;
+            padding: 64px 0 49px;
+
+        }
+
+    }
+
+    &__heading {
+        text-align: left;
+
+        @include media-down(s) {
+            font-size: 24px;
+        }
+    }
+
+    &__text {
+        margin-top: 23px;
+    }
+}

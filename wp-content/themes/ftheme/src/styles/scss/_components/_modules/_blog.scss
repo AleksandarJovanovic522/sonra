@@ -1,0 +1,16 @@
+.m-blog {
+    @include section-padding;
+    width: 100%;
+
+
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include media-up(m) {
+            flex-wrap: nowrap;
+        }
+    }
+
+}

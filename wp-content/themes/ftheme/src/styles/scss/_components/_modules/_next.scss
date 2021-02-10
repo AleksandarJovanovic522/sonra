@@ -1,0 +1,85 @@
+.m-next {
+    @include section-padding;
+    width: 100%;
+    background-color: $blue-light;
+
+    &__heading,
+    &__subheading {
+        color: $white;
+
+    }
+
+    &__subheading {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    &__editions {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+
+        @include media-up(l) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+    }
+
+    &__edition {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 384px;
+        min-width: 260px;
+        min-height: 144px;
+        padding: 15px 20px;
+        background: $white;
+        margin-top: 32px;
+
+        @include media-up(s) {
+            padding: 15px 32px;
+
+        }
+
+
+    }
+
+    &__editionImg {
+
+        min-width: 80px;
+    }
+
+    &__editionText {
+        display: flex;
+        flex-direction: column;
+        margin: 3px 0 0 25px;
+    }
+
+    &__editionFor {
+        margin-top: 5px;
+        font-weight: 600;
+        font-size: 16px;
+        color: $gray-heading;
+    }
+
+    &__editionInfo {
+        font-size: 14px;
+        line-height: 1;
+    }
+
+    &__text {
+        margin-top: 52px;
+
+        h5 {
+            padding-bottom: 4px;
+        }
+    }
+
+    &__button {
+        margin: 48px auto 0;
+    }
+}

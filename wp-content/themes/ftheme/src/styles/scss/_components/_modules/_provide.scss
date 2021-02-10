@@ -1,0 +1,51 @@
+.m-provide {
+    width: 100%;
+    margin-top: 60px;
+
+    @include media-up (m) {
+        margin-top: 89px;
+    }
+
+    &__heading,
+    &__subheading {
+        text-align: center;
+    }
+
+    &__subheading {
+        margin-top: 20px;
+    }
+
+    &__container {
+        margin-top: 84px;
+    }
+
+    &__block {
+        display: flex;
+        margin-top: 49px;
+    }
+
+    &__imgDiv {
+        min-width: 48px;
+        margin-right: 33px;
+    }
+
+    &__textDiv {
+
+        padding-top: 8px;
+
+        p:nth-child(2) {
+            margin-top: 11px;
+        }
+
+        ul {
+            margin: 24px 0;
+        }
+
+        h4,
+        h5 {
+            margin-top: 0;
+            text-align: left;
+        }
+    }
+
+}

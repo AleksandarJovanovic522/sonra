@@ -1,0 +1,11 @@
+.m-intro {
+    @include section-padding;
+
+    &.-try {
+        padding-bottom: 34px;
+    }
+
+    &__text {
+        margin-top: 64px;
+    }
+}
