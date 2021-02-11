@@ -30,6 +30,10 @@
                 filter: none;
             }
         }
+
+        &:not(:first-child) {
+            margin-top: 15px;
+        }
     }
 
     &::before {

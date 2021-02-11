@@ -1,6 +1,6 @@
 .m-asidePosts {
     margin-top: 50px;
-    box-shadow: 0px 0px 5px 0px rgba($gray-light, 0.75);
+    box-shadow: 0p 0p 5px 0p rgba($gray-light, .75);
 
     @include media-up(m) {
         max-width: 360px;
@@ -12,7 +12,7 @@
         padding: 20px 15px;
         border: 1px solid $gray-light;
         border-radius: 0 0 3px 3px;
-        border-top: none;
+        border-top: 0;
 
         &.-active {
             display: block;
@@ -64,7 +64,7 @@
         display: flex;
 
         border: 1px solid $gray-light;
-        border-bottom: none;
+        border-bottom: 0;
     }
 
     &__button {
@@ -90,7 +90,7 @@
             height: 2px;
             background-color: $blue-dark;
             transform: scaleX(0);
-            transition: transform 0.3s;
+            transition: transform .3s;
         }
 
         &.-active {

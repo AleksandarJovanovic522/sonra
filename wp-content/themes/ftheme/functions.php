@@ -85,7 +85,7 @@ function img_unautop($pee)
     $pee = preg_replace('/<p>\\s*?(<a .*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', '<div class="figure">$1</div>', $pee);
     return $pee;
 }
-add_filter('acf_the_content', 'img_unautop', 30);
+add_filter('the_content', 'img_unautop', 30);
 
 //Remove wordpress editor from pages
 add_action('admin_init', 'remove_textarea');
@@ -122,3 +122,11 @@ function wpb_track_post_views($post_id)
     wpb_set_post_views($post_id);
 }
 add_action('wp_head', 'wpb_track_post_views');
+
+//Change the excerpt more string
+
+function my_theme_excerpt_more($more)
+{
+    return ' ...';
+}
+add_filter('excerpt_more', 'my_theme_excerpt_more');

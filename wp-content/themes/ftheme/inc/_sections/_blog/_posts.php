@@ -5,7 +5,6 @@
     <?php
     while (have_posts()) : the_post();
       $post_title = get_the_title();
-      $post_excrept = get_field('post_excerpt');
       $post_url = get_permalink();
       $post_categories = wp_get_post_categories(get_the_ID());
       $post_avatar = get_avatar(get_the_author_meta('ID'));
@@ -16,18 +15,20 @@
     ?>
 
       <div class="m-posts__post" data-aos="fade-right" data-aos-duration="600">
-        <?php
-        foreach ($post_categories as $category) {
+        <div class="m-posts__categoryContainer">
+          <?php
+          foreach ($post_categories as $category) {
 
-        ?>
-          <a href="<?php echo esc_url(get_category_link($category)); ?>" class="a-category">
-            <?php
-            echo get_cat_name($category);
-            ?>
-          </a>
-        <?php
-        }
-        ?>
+          ?>
+            <a href="<?php echo esc_url(get_category_link($category)); ?>" class="a-category">
+              <?php
+              echo get_cat_name($category);
+              ?>
+            </a>
+          <?php
+          }
+          ?>
+        </div>
         <h2 class="m-posts__title"><a href="<?php echo $post_url; ?>"><?php echo $post_title; ?></a></h2>
         <div class="a-authorDate">
           <a href="<?php echo $post_author_link; ?>" class="a-authorDate__author">
@@ -40,7 +41,7 @@
           </a>
           <span class="a-authorDate__date"><?php echo $post_date; ?></span>
         </div>
-        <p class="m-posts__excerpt"><?php echo $post_excrept; ?></p>
+        <p class="m-posts__excerpt"><?php echo wp_trim_excerpt(); ?></p>
         <a href="<?php echo $post_url; ?>" class="m-posts__permalink">Read More <span class="a-arrow -readMore"></span></a>
       </div>
 
