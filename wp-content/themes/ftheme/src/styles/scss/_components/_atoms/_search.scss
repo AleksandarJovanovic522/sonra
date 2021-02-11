@@ -8,6 +8,7 @@
     background-size: auto;
     background-repeat: no-repeat;
     border: 0;
+    outline: 0;
     border-bottom: 2px solid $white;
     color: $white;
     font-weight: 600;
@@ -19,7 +20,14 @@
         opacity: 1;
     }
 
-    &::-moz-placeholder { // sass-lint:disable-line no-vendor-prefixes
+    &::placeholder {
+        color: $white
+    }
+
+
+
+    &::-moz-placeholder {
+        // sass-lint:disable-line no-vendor-prefixes
         opacity: 1;
     }
 }

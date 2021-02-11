@@ -3,7 +3,7 @@ $siteLogo = get_field('site_logo', 'option');
 $logo = $siteLogo ?: get_template_directory_uri() . '/bundles/images/logo.png';
 ?>
 
-<div class="m-nav <?php echo (is_single()) ? '-single' : ''; ?> ">
+<div class="m-nav <?php echo (is_single() or is_page_template('custom-policies.php')) ? '-single' : '';  ?> ">
   <a href="<?php _e(home_url('/')); ?>" class="m-nav__logo">
     <img src="<?php echo $logo; ?>" alt="Logo">
   </a>
