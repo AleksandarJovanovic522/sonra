@@ -23,21 +23,40 @@ global $globalSite;
     <?php endif; ?>
 
     <?php wp_head(); ?>
+
+    <script type="text/javascript">
+  (function() {
+    window.sib = { equeue: [], client_key: "smh3jeudh7r0dmba73eh5ho5" };
+    /* OPTIONAL: email to identify request*/
+    // window.sib.email_id = 'example@domain.com';
+    /* OPTIONAL: to hide the chat on your script uncomment this line (0 = chat hidden; 1 = display chat) */
+    // window.sib.display_chat = 0;
+    // window.sib.display_logo = 0;
+    /* OPTIONAL: to overwrite the default welcome message uncomment this line*/
+    // window.sib.custom_welcome_message = 'Hello, how can we help you?';
+    /* OPTIONAL: to overwrite the default offline message uncomment this line*/
+    // window.sib.custom_offline_message = 'We are currently offline. In order to answer you, please indicate your email in your messages.';
+    window.sendinblue = {}; for (var j = ['track', 'identify', 'trackLink', 'page'], i = 0; i < j.length; i++) { (function(k) { window.sendinblue[k] = function(){ var arg = Array.prototype.slice.call(arguments); (window.sib[k] || function() { var t = {}; t[k] = arg; window.sib.equeue.push(t);})(arg[0], arg[1], arg[2]);};})(j[i]);}var n = document.createElement("script"),i = document.getElementsByTagName("script")[0]; n.type = "text/javascript", n.id = "sendinblue-js", n.async = !0, n.src = "https://sibautomation.com/sa.js?key=" + window.sib.client_key, i.parentNode.insertBefore(n, i), window.sendinblue.page();
+  })();
+</script>
 </head>
 
 <body <?php body_class(); ?>>
-
-
+    <?php
+    require_once(dirname(__FILE__) . '/inc/_sections/_header/_modal-free.php');
+    require_once(dirname(__FILE__) . '/inc/_sections/_header/_modal-demo.php');
+    require_once(dirname(__FILE__) . '/inc/_sections/_header/_modal-checklist.php');
+    ?>
     <div id="page" class="site">
         <header class="m-header 
         <?php
-        echo (is_page_template('custom-about.php')) ? '-about' : '';
-        echo (is_page_template('custom-contact.php')) ? '-about' : '';
-        echo (is_page_template('custom-flexter.php')) ? '-flexter' : '';
-        echo (is_page_template('custom-services.php')) ? '-services' : '';
-        echo (is_page_template('custom-data-sheet.php')) ? '-data' : '';
-        echo (is_page_template('custom-policies.php')) ? '-policies' : '';
-        echo (is_archive() || is_search()) ? '-blog' : '';
+        echo (is_page_template('custom-about.php')) ? '-about ' : '';
+        echo (is_page_template('custom-contact.php')) ? '-about ' : '';
+        echo (is_page_template('custom-flexter.php')) ? '-flexter ' : '';
+        echo (is_page_template('custom-services.php')) ? '-services ' : '';
+        echo (is_page_template('custom-data-sheet.php')) ? '-data ' : '';
+        echo (is_page_template('custom-policies.php')) ? '-policies ' : '';
+        echo (is_archive() or is_search() or is_page_template('custom-data-sheet.php')) ? '-blog ' : '';
         echo (is_single()) ? '-single' : '';
         echo (is_404()) ? '-notFound' : '';
         ?>  " role="banner" style="background-image: url(
@@ -50,8 +69,6 @@ global $globalSite;
                 echo $header_image;
 
             endif;
-
-            // echo (is_archive() || is_search()) ? $blog_archive_image : $header_image 
             ?>
             );">
             <div class="m-header__overlay"></div>
@@ -81,7 +98,7 @@ global $globalSite;
                     if (is_page_template('custom-products.php')) {
                     ?>
 
-                        <a href="#cb71b75f44" class="m-header__cta a-ctaPrimary -demo">Book a Demo</a>
+                        <a href="#" class="m-header__cta a-ctaPrimary -demo js-demo-button">Book a Demo</a>
 
                     <?php
                     }
@@ -90,7 +107,7 @@ global $globalSite;
                     if (is_page_template('custom-flexter.php')) {
                     ?>
 
-                        <a href="#cb79e09bcf" class="m-header__cta a-ctaPrimary ">Get Started</a>
+                        <a href="#free" class="m-header__cta a-ctaPrimary js-free-button">Get Started</a>
                         <p class="m-header__noCard">*No credit card required</p>
 
                     <?php
@@ -140,7 +157,7 @@ global $globalSite;
                     if (is_page_template('custom-services.php')) {
                     ?>
 
-                        <a href="#" class="m-header__cta a-ctaPrimary">Book a Call</a>
+                        <a href="<?php echo get_site_url() . '/contact-sonra'; ?>" class="m-header__cta a-ctaPrimary">Book a Call</a>
 
                     <?php
                     }

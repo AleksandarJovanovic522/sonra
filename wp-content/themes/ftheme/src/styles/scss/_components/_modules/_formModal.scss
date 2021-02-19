@@ -1,0 +1,77 @@
+.m-formModal {
+    position: absolute;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+    min-height: 100%;
+    background: rgba($blue-light, .3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+
+
+
+    &.-active {
+        opacity: 1;
+        pointer-events: auto;
+
+        .m-formModal {
+            &__form {
+
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__form {
+        position: relative;
+        top: 100px;
+        height: max-content;
+        margin: 0 10px;
+        transform: translateY(-20px);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba($blue-light, .6);
+        transition: transform .3s;
+    }
+
+    &__close {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        background: $blue-light;
+        border-radius: 50%;
+        display: flex;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: calc(50% - 1px);
+            left: calc(50% - 12px);
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: $white;
+
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    iframe {
+        border-radius: 10px;
+    }
+}

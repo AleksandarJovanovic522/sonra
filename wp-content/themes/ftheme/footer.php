@@ -22,6 +22,7 @@ $footer_address = get_field('footer_address', 'option');
     </div>
 </footer>
 </div>
+
 <?php wp_footer(); ?>
 </body>
 

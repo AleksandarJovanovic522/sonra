@@ -126,15 +126,8 @@
 
     &.-data {
         min-height: 400px;
-        background-position: center right;
-        background-size: auto;
-        background-color: $blue-light;
 
         .m-header {
-
-            &__overlay {
-                display: none;
-            }
 
             &__heading {
                 line-height: calc(96/80);

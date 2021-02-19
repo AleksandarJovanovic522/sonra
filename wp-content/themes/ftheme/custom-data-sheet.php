@@ -53,7 +53,7 @@ get_header();
                 $data_third_edition = get_sub_field('data_third_edition');
                 ?>
 
-                <h3 class="m-table__heading"><?php echo $data_table_heading; ?></h3>
+                <h2 class="m-table__heading"><?php echo $data_table_heading; ?></h2>
                 <table class="m-table__table">
                   <tr class="m-table__mainRow">
                     <th></th>
@@ -132,7 +132,7 @@ get_header();
 
             <section class="m-dataSheet__section">
               <div class="m-dataSheet__galleryContainer ">
-                <h3 class="m-dataSheet__heading"><?php echo $data_gallery_heading; ?></h3>
+                <h2 class="m-dataSheet__heading"><?php echo $data_gallery_heading; ?></h2>
 
                 <?php
 
@@ -152,7 +152,7 @@ get_header();
 
                           <?php foreach ($data_gallery_block_images as $image) : ?>
 
-                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" title="<?php echo esc_attr($image["title"]); ?>" />
 
                           <?php endforeach; ?>
 

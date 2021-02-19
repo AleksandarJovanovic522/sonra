@@ -14,7 +14,7 @@ $for_text = get_field('for_text');
       </h2>
       <div class="m-data__text  m-content -headingList -twoColumnList -data"><?php echo $for_text; ?></div>
 
-      <a href="#cb71b75f44" class="m-data__button -biggerMarginTop a-ctaPrimary -demo">Book a Demo</a>
+      <a href="#demo" class="m-data__button -biggerMarginTop a-ctaPrimary -demo js-demo-button">Book a Demo</a>
     </div>
   </div>
 </section>

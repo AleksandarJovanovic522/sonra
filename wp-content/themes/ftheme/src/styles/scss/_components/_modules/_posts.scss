@@ -173,10 +173,26 @@
         }
 
         a {
-            transition: color .3s;
+            transition: color .3s, background-color .3s;
 
             &:hover {
                 color: $blue-light;
+            }
+        }
+
+        .a-ctaPrimary {
+            &:hover {
+                color: $white;
+            }
+        }
+
+
+        ul {
+            margin-left: 20px;
+
+            li {
+                list-style-type: disc;
+
             }
         }
 

@@ -13,8 +13,8 @@ $logo = $siteLogo ?: get_template_directory_uri() . '/bundles/images/logo.png';
       ?>
     </nav>
     <div class="m-nav__ctas">
-      <a href="#cb71b75f44" class="m-nav__demo a-ctaNav -demo <?php echo (is_single()) ? '-single ' : '';  ?>">Book a Demo</a>
-      <a href="#cb79e09bcf" class="m-nav__try a-ctaNav -try">Try Flexter</a>
+      <a href="#demo" class="m-nav__demo a-ctaNav -demo js-demo-button <?php echo (is_single()) ? '-single ' : '';  ?>">Book a Demo</a>
+      <a href="#free" class="m-nav__try a-ctaNav -try js-free-button">Try Flexter</a>
     </div>
   </div>
   <span class="m-nav__hamburger js-hamburger">

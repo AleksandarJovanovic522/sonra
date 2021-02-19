@@ -12,7 +12,7 @@ $start_list = get_field('start_list');
           <div class="m-start__list m-content -whiteCheckmark -whiteText"><?php echo $start_list ?></div>
         </div>
       </div>
-      <a href="#cb79e09bcf" class="m-start__cta a-ctaPrimary -invert">Get Started</a>
+      <a href="#free" class="m-start__cta a-ctaPrimary -invert js-free-button">Get Started</a>
       <span class="m-start__card">*No credit card required</span>
     </div>
   </section>

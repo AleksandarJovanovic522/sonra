@@ -12,7 +12,7 @@ $faq_text = get_field('faq_text');
       <div class="m-faq__text m-content">
         <?php echo $faq_text; ?>
       </div>
-      <a href="#cb71b75f44" class="m-faq__button a-ctaPrimary -demo">Book a Demo</a>
+      <a href="#demo" class="m-faq__button a-ctaPrimary -demo js-demo-button">Book a Demo</a>
     </div>
   </div>
 </section>

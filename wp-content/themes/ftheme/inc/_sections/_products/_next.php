@@ -44,7 +44,7 @@ $next_text = get_field('next_text');
         ?>
       </div>
       <div class="m-next__text m-content -whiteText"><?php echo $next_text; ?></div>
-      <a href="#cb71b75f44" class="m-next__button a-ctaPrimary -invert -demo">Book a Demo</a>
+      <a href="#demo" class="m-next__button a-ctaPrimary -invert -demo js-demo-button">Book a Demo</a>
     </div>
 
   </div>

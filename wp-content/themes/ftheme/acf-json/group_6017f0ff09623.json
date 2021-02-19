@@ -60,7 +60,7 @@
             "key": "field_6017f1b0783a3",
             "label": "HQ Address",
             "name": "contact_address",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -71,9 +71,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "rows": 6,
+            "new_lines": "br"
         },
         {
             "key": "field_6017f1c6783a4",
@@ -228,5 +228,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1612183487
+    "modified": 1613657846
 }

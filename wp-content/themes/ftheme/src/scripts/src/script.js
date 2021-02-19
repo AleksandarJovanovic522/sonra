@@ -113,6 +113,70 @@
         },
     };
 
+    const demoPopup = {
+        init: function() {
+            this.toggle();
+        },
+        toggle: function() {
+            const demoButton = document.querySelectorAll('.js-demo-button');
+            const demoModal = document.querySelector('.js-demo-modal');
+            const demoClose = document.querySelector('.js-demo-close');
+
+            demoButton.forEach(button => {
+                button.addEventListener('click', function() {
+                    demoModal.classList.add('-active');
+                });
+            });
+
+            demoClose.addEventListener('click', function() {
+                demoModal.classList.remove('-active');
+            });
+        },
+    };
+
+    const freePopup = {
+        init: function() {
+            this.toggle();
+        },
+        toggle: function() {
+            const freeButton = document.querySelectorAll('.js-free-button');
+            const freeModal = document.querySelector('.js-free-modal');
+            const freeClose = document.querySelector('.js-free-close');
+
+            freeButton.forEach(button => {
+                button.addEventListener('click', function() {
+                    freeModal.classList.add('-active');
+
+                });
+            });
+
+            freeClose.addEventListener('click', function() {
+                freeModal.classList.remove('-active');
+            });
+        },
+    };
+
+    const checklistPopup = {
+        init: function() {
+            this.toggle();
+        },
+        toggle: function() {
+            const checklistButton = document.querySelectorAll('.js-checklist-button');
+            const checklistModal = document.querySelector('.js-checklist-modal');
+            const checklistClose = document.querySelector('.js-checklist-close');
+
+            checklistButton.forEach(button => {
+                button.addEventListener('click', function() {
+                    checklistModal.classList.add('-active');
+                });
+            });
+
+            checklistClose.addEventListener('click', function() {
+                checklistModal.classList.remove('-active');
+            });
+        },
+    };
+
     $(document).ready(function() {
 
         AOS.init({
@@ -122,6 +186,10 @@
 
         dropdown.init();
         navigation.init();
+        demoPopup.init();
+        freePopup.init();
+        checklistPopup.init();
+
 
         if (document.querySelector('.js-popular-button')) {
 

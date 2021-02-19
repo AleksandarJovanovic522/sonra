@@ -48,7 +48,7 @@ $sidebar_quote_info = get_field('sidebar_quote_info', 'option');
         <span class="m-banner__info"><?php echo $sidebar_quote_info; ?></span>
       </div>
     </div>
-    <a href="#cb71b75f44" class="m-banner__cta a-ctaPrimary -invert">Book a Demo</a>
+    <a href="#demo" class="m-banner__cta a-ctaPrimary -invert js-demo-button">Book a Demo</a>
   </div>
 
 
